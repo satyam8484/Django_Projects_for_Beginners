@@ -1,1 +1,1 @@
-# Django_Projectsfor_Beginners
+# Django_Projects_for_Beginners
