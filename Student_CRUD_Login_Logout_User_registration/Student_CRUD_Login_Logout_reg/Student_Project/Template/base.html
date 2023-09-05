@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" >
+</head>
+<body>
+{% if user.is_authenticated %}
+    Hello, {{user.first_name}}  <a href="/accounts/logout">Logout</a>
+{% endif %}
+{% block content %}
+
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+body{
+text-align: center;
+background-color: #1C1C1C;
+font-family:helvetica;
+
+}
+
+
+h1{
+	margin:0px;
+	margin-top:40px;
+	color:#8181F7;
+	font-size:45px;
+}
+
+
+#date_id{
+border:2px dashed #2E9AFE;
+color:silver;
+margin-top: 75px;
+font-size: 40px;
+padding: 10px;
+width:600px;
+margin-left: 220px;
+}
+
+#time_id{
+border:2px dashed #2E9AFE;
+color:silver;
+margin-top: 20px;
+font-size: 130px;
+padding: 10px;
+width:700px;
+margin-left: 165px;
+}
+
+
+
+

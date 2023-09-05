@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <style>
+    table, th, td {
+  border: 0px solid black;
+  border-collapse: collapse;
+  text-align:left;
+  padding:10px;
+    }
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family:verdana;
+    }
+    .cntfrm{
+    margin-top:100px;
+    }
+    .form-control
+    {
+        height: 20px;
+        color:#31b0d5 ;
+
+    }
+    .font-for{
+    font-size:20px;
+    font-family:verdana;
+    }
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="cntfrm">
+    <h1 align="center" >Contact Form</h1>
+    <center><h4 style="color:red;">{{msg}}</h4></center>
+    <form action="contact" method="post">
+        {% csrf_token %}
+        <table align="center" border="0">
+            <tr>
+                <th class="font-for">Name</th>
+                <td><input class="form-control" type="text" name="name" height="30" required="required"></td>
+            </tr>
+            <tr>
+                <th class="font-for">Phone Number</th>
+                <td><input class="form-control" type="tel" name="number"></td>
+            </tr>
+            <tr>
+                <th class="font-for">Email</th>
+                <td><input class="form-control" type="email" name="email" required="required"></td>
+            </tr>
+            <tr>
+                <th class="font-for">Message</th>
+                <td><textarea rows="5" cols="30" name="message"></textarea></td>
+            </tr>
+            <tr>
+                <th colspan="2" style="align:center;"><input type="submit" class="button" name="Submit"></th>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

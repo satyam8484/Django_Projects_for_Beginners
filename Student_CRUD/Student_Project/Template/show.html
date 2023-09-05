@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" align="center">
+
+    <h1>Information of Students</h1>
+    {% if messages %}
+        {% for message in messages %}
+         <h2 style="color:red;">{{message}}</h2>
+        {% endfor %}
+
+    {% endif %}
+
+    <table id="std_table">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Address</th>
+            <th>Delete</th>
+            <th>Update</th>
+
+        </tr>
+        </thead>
+
+        {% for student in students %}
+        <tr>
+            <td>{{student.No}}</td>
+            <td>{{student.Name}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.Address}}</td>
+            <td><a id="del" href="delete/{{student.id}}" title="Delete the Student" onclick="return confirm('Are sure you want to delete this ?')">Delete</a></td>
+            <td><a id="up"  href="update/{{student.id}}" title="Update the Student">Update</a></td>
+        </tr>
+        {% endfor %}
+
+
+    </table>
+
+    <br><br>
+    <a class="button" href="/" >Add New Student</a>
+</div>
+
+
+{% endblock %}

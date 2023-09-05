@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container" align="center">
+    <h1>Please Provide the Information</h1>
+    {% if messages %}
+
+    {% for message in messages %}
+    <h3 style="color:red;">{{ message }}</h3>
+    {% endfor %}
+
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Insert Record" class="button">
+    </form>
+    <br>
+    <input type="button" class="button" onclick="location.href='show';" value="Show Details"/>
+</div>
+{% endblock %}

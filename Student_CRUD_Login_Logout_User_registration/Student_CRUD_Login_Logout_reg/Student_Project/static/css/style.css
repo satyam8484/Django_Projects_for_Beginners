@@ -1,0 +1,81 @@
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+body {
+background-color:white;
+}
+
+input {
+  padding:5px
+}
+
+#del:link {
+  color: white;
+  background-color: #BA2F16;
+  text-align:center;
+  padding:10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#up:link,#up:visited {
+color:white;
+background-color:#6ab04c;
+padding:10px;
+display: inline-block;
+text-align:center;
+text-decoration: none;
+}
+
+#std_table {
+  border-collapse: collapse;
+  font-size:18px;
+  width:100%;
+}
+
+#std_table th{
+background-color:black;
+padding-top:12px;
+padding-bottom:12px;
+text-align:left;
+color:white;
+font-size:20px;
+}
+
+#std_table th,#std_table td{
+border:1px solid #ddd;
+padding:15px;
+}
+
+#std_table tr:hover {
+background-color:black;
+color:white;
+
+}
+
+#up_table th{
+text-align:left;
+padding:10px;
+}
+
+/* Registration Form */
+
+.form_container
+{
+align:center;
+margin-top:50px;
+}
+
+.form_container input{
+margin:3px;
+width:200px;
+}
+

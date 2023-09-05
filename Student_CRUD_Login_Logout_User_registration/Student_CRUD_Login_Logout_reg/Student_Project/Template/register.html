@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+
+</head>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="form_container" id="regi_container" align="center">
+    <h1>Registration Form</h1>
+    {% for msg in messages %}
+    <h2 style="color:red;">{{msg}}</h2>
+    {% endfor %}
+    <form action="register" method="post">
+        {% csrf_token %}
+        <input type="text" id='fname' name="fname" placeholder="First Name"><br>
+        <input type="text" id='lname' name="lname" placeholder="Last Name"><br>
+        <input type="text" id='username' name="username" placeholder="UserName" required><br>
+        <input type="email" id='email' name="email" placeholder="Email" required><br>
+        <input type="password" id='password' name="password1" placeholder="Password" required><br>
+        <input type="password" id='confirm_password' name="password2" placeholder="Confirm Password" required><br><br>
+        <input class="button" type="submit" name="submit">
+    </form>
+    <br>
+    Already have an account? <a href="login">Login</a>
+</div>
+
+{% endblock %}
+
+</html>

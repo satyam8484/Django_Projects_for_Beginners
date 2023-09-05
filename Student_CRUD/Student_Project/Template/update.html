@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container" align="center">
+
+    <h1>Update Student Information</h1>
+<table id="up_table">
+    <form method="post">
+        {% csrf_token %}
+        <tr>
+            <th>No</th>
+            <td><input type="text" name="No" value="{{students.No}}" placeholder="NO"></td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" name="Name" value="{{students.Name}}" placeholder="Name"></td>
+        </tr>
+        <tr>
+            <th>Marks</th>
+            <td><input type="text" name="marks" value="{{students.marks}}" placeholder="Marks"></td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td><input type="text" name="Address" value="{{students.Address}}" placeholder="Address"></td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" class="button" value="Update" onclick="return confirm('Are you sure you want to update it ?')"></td>
+        </tr>
+    </form>
+</table>
+
+</div>
+{% endblock %}

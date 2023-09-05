@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		
+		function date_time_display()
+		{
+			var d = new Date();
+
+			// Time
+			var hr = (d.getHours()<10?'0':'') + d.getHours();
+			var min = (d.getMinutes()<10?'0':'') + d.getMinutes();
+			var sec = (d.getSeconds()<10?'0':'') + d.getSeconds();
+			var time_str = hr + ":" + min + ":" + sec;
+
+			// Date
+			const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}; 
+			var Date_str = d.toLocaleDateString(undefined, options);
+
+			console.log("This is my Console");
+			document.getElementById('date_id').innerHTML = Date_str;
+			document.getElementById('time_id').innerHTML = time_str;
+		}
+		var myvar = setInterval(date_time_display,1000)
+	</script>
+</head>
+
+<body onload="date_time_display()">
+
+	<div class="container">
+
+	<h1 id="heading_id">Digital Clock With Complete Time And date<br>Using CSS And JavaScript</h1>
+		<p id="date_id"></p>
+		<p id="time_id"></p>
+
+	</div>
+
+</body>
+
+</html>

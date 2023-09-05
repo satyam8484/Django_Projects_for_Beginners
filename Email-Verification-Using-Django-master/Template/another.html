@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Another</title>
+</head>
+<body>
+
+<h3>You need to Give Gmail Credential for Further Process</h3>
+<h3 style="color:red;">Note :- Please ON : Less secure app access of your Gmail Account</h3>
+<form action="send_Gmail" method="POST">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="Email"><br>
+    <input type="password" name="password" placeholder="Password"><br>
+    <input type="submit" value="Submit">
+</form>
+{{msg}}
+</body>
+</html>
